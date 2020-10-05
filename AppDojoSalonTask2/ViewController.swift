@@ -45,9 +45,7 @@ class ViewController: UIViewController {
         case 2:
             resultLabel.text = "\(number1 * number2)"
         case 3:
-            if number2 > 0.0 {
-                resultLabel.text = "\(number1 / number2)"
-            } else {
+            guard number2 != 0 else {
                 resultLabel.text = "割る数には０以外を入力してください"
                 
                 return
